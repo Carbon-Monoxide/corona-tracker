@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://kit.fontawesome.com/dc08f46eeb.js" crossorigin="anonymous" SameSite = none Secure></script>
+    <script src='./corona-tracker.js'></script>
+</head>
+
+
+
+<body onload="getStats('Deaths')">
+    <h1>Active Corona Tracker</h1>
+    <h3>Updated as of: <span style='color: rgb(0, 153, 255);' id='dateModified'></span></h3>    
+<div>
+    <input type='text' name='country' id='searchBar'>
+    <button name='button' onclick="find()" id='submit'>Search</button>
+</div>
+
+    <table id='table'>
+        <tr class='headerRow'>
+            <th>Index</th>
+            <th style='cursor: pointer;' onclick='onTableHeaderClick("Country")' id='CountryHeader'>Country <i
+                    class='fas'></i></th>
+            <th style='cursor: pointer;' onclick='onTableHeaderClick("Confirmed")' id='ConfirmedHeader'>Infected
+                <i class='fas'></i>
+            </th>
+            <th style='cursor: pointer;' onclick='onTableHeaderClick("Deaths")' id='DeathsHeader'>Deaths <i
+                    class='fas'></i>
+            </th>
+            <th style='cursor: pointer;' onclick='onTableHeaderClick("Recovered")' id='RecoveredHeader'>Recovered
+                <i class='fas'></i>
+            </th>
+        </tr>
+    </table>
+</body>
+
+</html>
